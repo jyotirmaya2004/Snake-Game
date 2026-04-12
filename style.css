@@ -194,8 +194,8 @@ section .infos{
 }
 .modal{
     z-index: 9999;
+    pointer-events: auto;
 }
-
 .start-game,
 .game-over{
     position: relative;
@@ -203,8 +203,6 @@ section .infos{
 }
 
 .btn{
-    position: relative;
-    z-index: 10001;
-    pointer-events: auto;
     touch-action: manipulation;
+    pointer-events: auto;
 }
