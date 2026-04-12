@@ -128,13 +128,20 @@ foodBlock.style.backgroundImage = `url(${currentFoodImage})`;
 // 	render();
 // },300);
 
-startButton.addEventListener("click",function(){
-	modal.style.display="none";
-	intervalId= setInterval(()=>{render()},200);
-	startTimer();
-})
+function startGame(e) {
+    e.preventDefault();
 
-restartButton.addEventListener("click",restartGame)
+    modal.style.display = "none";
+    clearInterval(intervalId);
+
+    intervalId = setInterval(render, 200);
+    startTimer();
+}
+
+startButton.addEventListener("click", startGame);
+startButton.addEventListener("touchstart", startGame);
+restartButton.addEventListener("click", restartGame);
+restartButton.addEventListener("touchstart", restartGame);
 
 function startTimer() {
     clearInterval(timerId);
@@ -206,3 +213,33 @@ window.addEventListener("keydown",(event)=>{
 		direction="right";
 	}
 })
+
+let touchStartX = 0;
+let touchStartY = 0;
+
+window.addEventListener("touchstart", (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+});
+
+window.addEventListener("touchend", (e) => {
+    let touchEndX = e.changedTouches[0].clientX;
+    let touchEndY = e.changedTouches[0].clientY;
+
+    let dx = touchEndX - touchStartX;
+    let dy = touchEndY - touchStartY;
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+        if (dx > 0) {
+            direction = "right";
+        } else {
+            direction = "left";
+        }
+    } else {
+        if (dy > 0) {
+            direction = "down";
+        } else {
+            direction = "up";
+        }
+    }
+});
