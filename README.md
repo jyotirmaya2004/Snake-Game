@@ -61,4 +61,4 @@ High score is saved in browser local storage, so it remains even after refreshin
 1. Download or clone this repository
 
 ```bash
-git clone https://github.com/your-username/snake-game.git
+git clone https://github.com/jyotirmaya2004/Snake-Game.git
