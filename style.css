@@ -192,3 +192,19 @@ section .infos{
 .modal .game-over{
 	display: none;
 }
+.modal{
+    z-index: 9999;
+}
+
+.start-game,
+.game-over{
+    position: relative;
+    z-index: 10000;
+}
+
+.btn{
+    position: relative;
+    z-index: 10001;
+    pointer-events: auto;
+    touch-action: manipulation;
+}
