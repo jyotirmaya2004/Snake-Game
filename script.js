@@ -128,15 +128,22 @@ foodBlock.style.backgroundImage = `url(${currentFoodImage})`;
 // 	render();
 // },300);
 
-function startGame(e) {
-    e.preventDefault();
-
+function startGame() {
     modal.style.display = "none";
+
     clearInterval(intervalId);
+    clearInterval(timerId);
 
     intervalId = setInterval(render, 200);
     startTimer();
 }
+
+function restartGameHandler() {
+    restartGame();
+}
+
+startButton.onclick = startGame;
+restartButton.onclick = restartGameHandler;
 
 startButton.addEventListener("click", startGame);
 startButton.addEventListener("touchstart", startGame);
