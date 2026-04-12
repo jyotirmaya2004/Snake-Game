@@ -138,17 +138,6 @@ function startGame() {
     startTimer();
 }
 
-function restartGameHandler() {
-    restartGame();
-}
-
-startButton.onclick = startGame;
-restartButton.onclick = restartGameHandler;
-
-startButton.addEventListener("click", startGame);
-startButton.addEventListener("touchstart", startGame);
-restartButton.addEventListener("click", restartGame);
-restartButton.addEventListener("touchstart", restartGame);
 
 function startTimer() {
     clearInterval(timerId);
