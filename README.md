@@ -58,7 +58,7 @@ High score is saved in browser local storage, so it remains even after refreshin
 
 ## 🚀 How to Run
 
-1. Download or clone this repository
+1. To play
 
 ```bash
-git clone https://github.com/jyotirmaya2004/Snake-Game.git
+[[git clone https://github.com/jyotirmaya2004/Snake-Game.git](https://jyotirmaya2004.github.io/Snake-Game/)](https://jyotirmaya2004.github.io/Snake-Game/)
