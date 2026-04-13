@@ -170,7 +170,7 @@ section .infos{
 		opacity: 1;
 	}
 }
-.modal{
+/* .modal{
 	height: 100vh;
 	width:100vw;
 	position:fixed;
@@ -205,4 +205,33 @@ section .infos{
 .btn{
     touch-action: manipulation;
     pointer-events: auto;
+} */
+.modal{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #35353587;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.start-game,
+.game-over{
+    position: relative;
+    z-index: 10000;
+    pointer-events: auto;
+}
+
+.btn{
+    pointer-events: auto;
+    position: relative;
+    z-index: 10001;
 }
