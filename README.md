@@ -58,7 +58,11 @@ High score is saved in browser local storage, so it remains even after refreshin
 
 ## 🚀 How to Run
 
-1. To play
+1. Click the live demo link below to play the game:
+
+[▶️ Play Snake Game](https://jyotirmaya2004.github.io/Snake-Game/)
+
+2. Or clone this repository and run locally:
 
 ```bash
-[[git clone https://github.com/jyotirmaya2004/Snake-Game.git](https://jyotirmaya2004.github.io/Snake-Game/)](https://jyotirmaya2004.github.io/Snake-Game/)
+git clone https://github.com/jyotirmaya2004/Snake-Game.git
