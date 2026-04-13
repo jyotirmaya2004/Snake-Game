@@ -124,21 +124,18 @@ function render() {
     });
 }
 
-// function startGame() {
-//     modal.style.display = "none";
-//     startGameModal.style.display = "none";
-//     gameOverModal.style.display = "none";
-
-//     clearInterval(intervalId);
-//     clearInterval(timerId);
-
-//     intervalId = setInterval(render, 200);
-//     startTimer();
-// }
-
 function startGame() {
-    alert("Button is working");
+    modal.style.display = "none";
+    startGameModal.style.display = "none";
+    gameOverModal.style.display = "none";
+
+    clearInterval(intervalId);
+    clearInterval(timerId);
+
+    intervalId = setInterval(render, 200);
+    startTimer();
 }
+
 
 function startTimer() {
     clearInterval(timerId);
