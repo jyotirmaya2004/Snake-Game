@@ -132,7 +132,7 @@ function startGame() {
     clearInterval(intervalId);
     clearInterval(timerId);
 
-    intervalId = setInterval(render, 200);
+    intervalId = setInterval(render, 300);
     startTimer();
 }
 
@@ -188,7 +188,7 @@ function restartGame() {
 
     modal.style.display = "none";
 
-    intervalId = setInterval(render, 200);
+    intervalId = setInterval(render, 300);
     startTimer();
 }
 
