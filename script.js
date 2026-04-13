@@ -128,7 +128,20 @@ foodBlock.style.backgroundImage = `url(${currentFoodImage})`;
 // 	render();
 // },300);
 
-function startGame() {
+window.onload = function () {
+    const startBtn = document.querySelector(".btn-start");
+    const restartBtn = document.querySelector(".btn-restart");
+
+    startBtn.addEventListener("click", startGame);
+    startBtn.addEventListener("touchstart", startGame);
+
+    restartBtn.addEventListener("click", restartGame);
+    restartBtn.addEventListener("touchstart", restartGame);
+};
+
+function startGame(e) {
+    if (e) e.preventDefault();
+
     modal.style.display = "none";
 
     clearInterval(intervalId);
